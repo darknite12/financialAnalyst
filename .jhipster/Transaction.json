@@ -1,0 +1,63 @@
+{
+  "name": "Transaction",
+  "fields": [
+    {
+      "fieldName": "accountType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "transactionDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "chequeNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "amountCAD",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "amountUSD",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "isTracked",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "income",
+      "otherEntityRelationshipName": "transaction",
+      "relationshipName": "income",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "expense",
+      "otherEntityRelationshipName": "transaction",
+      "relationshipName": "expense",
+      "ownerSide": true
+    }
+  ],
+  "entityTableName": "transaction",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210407033553"
+}

@@ -1,0 +1,34 @@
+
+entity Expense {
+	category String required,
+    name String required,
+    searchString1 String,
+    searchString2 String   
+}
+
+entity Income {
+	name String required,
+    searchString1 String,
+    searchString2 String
+}
+
+entity Transaction {
+	accountType String,
+	transactionDate Instant,
+	chequeNumber String,
+	description1 String,
+    description2 String,
+    amountCAD Long,
+    amountUSD Long,
+    isTracked Boolean
+}
+
+relationship OneToOne {
+	Transaction{income} to Income
+    Transaction{expense} to Expense
+}
+
+paginate Transaction with infinite-scroll
+paginate Income, Expense with pagination
+
+service all with serviceImpl

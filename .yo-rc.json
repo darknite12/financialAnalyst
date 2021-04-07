@@ -41,6 +41,8 @@
     "jwtSecretKey": "ZDk1OTQ0ZTBhZmE5YmYzZjhlMWRiYTNjYmE5OTYzNGMxNDlhN2FiN2IzMjc5YzY1YWQ1YmU0MDMzZWEyMTkzZWEyNTIyZmE5MmI5Zjc5ZjgxMDM0MmRmOTY2ZTcxMjc4MDMxYmY4NmU0NTU5NzU0NWJiYTg3YmRkZTFlMGIyNTU=",
     "clientPackageManager": "npm",
     "clientThemeVariant": "",
-    "languages": ["en", "fr"]
+    "languages": ["en", "fr"],
+    "entities": ["Expense", "Income", "Transaction"],
+    "lastLiquibaseTimestamp": 1617766553000
   }
 }
